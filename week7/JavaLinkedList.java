@@ -36,7 +36,6 @@ public class JavaLinkedList {
         // animals.removeFirst();
         // animals.removeLast();
         animals.removeAll(removeAnimals);
-        animals.removeIf(Integer x -> x % 2 == 0);
         System.out.println(animals);
     }
 }
