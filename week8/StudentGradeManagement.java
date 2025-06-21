@@ -5,11 +5,9 @@ public class StudentGradeManagement {
 
     public static void main(String[] args) {
         String name = "John";
-        
         String[] subjects = {"Math", "Science", "Programming"};
         int[] practicalMarks = {12, 15, 18};
         int[] theoryMarks = {20, 25, 22};
-
         String filename = "Student_Certificate.txt";
 
         try {
