@@ -1,0 +1,19 @@
+-------- Student Certificate --------
+Name: John
+
+Subject: Math
+  Practical Marks: 12
+  Theory Marks: 20
+  Total Marks: 32
+
+Subject: Science
+  Practical Marks: 15
+  Theory Marks: 25
+  Total Marks: 40
+
+Subject: Programming
+  Practical Marks: 18
+  Theory Marks: 22
+  Total Marks: 40
+
+Certificate generated successfully.
