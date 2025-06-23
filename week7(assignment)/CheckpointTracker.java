@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
+
 public class CheckpointTracker {
     private LinkedList<String> checkpoints = new LinkedList<>();
     private Scanner scanner = new Scanner(System.in);
@@ -9,6 +10,7 @@ public class CheckpointTracker {
     }
     public void run() {
         int choice;
+
         do {
             System.out.println("\n--- Package Checkpoint Menu ---");
             System.out.println("1. Add New Checkpoint (End)");
@@ -19,7 +21,9 @@ public class CheckpointTracker {
             System.out.println("6. Exit");
             System.out.print("Choose an option: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
+            
+
             switch (choice) {
                 case 1 -> addCheckpointEnd();
                 case 2 -> addCorrectionStart();
@@ -31,18 +35,21 @@ public class CheckpointTracker {
             }
         } while (choice != 6);
     }
+
     private void addCheckpointEnd() {
         System.out.print("Enter checkpoint name: ");
         String checkpoint = scanner.nextLine();
         checkpoints.addLast(checkpoint);
         System.out.println("Checkpoint added at the end.");
     }
+
     private void addCorrectionStart() {
         System.out.print("Enter correction checkpoint name: ");
         String checkpoint = scanner.nextLine();
         checkpoints.addFirst(checkpoint);
         System.out.println("Correction added at the beginning.");
     }
+
     private void removeFirstCheckpoint() {
         if (!checkpoints.isEmpty()) {
             System.out.println("Removed: " + checkpoints.removeFirst());
@@ -50,6 +57,7 @@ public class CheckpointTracker {
             System.out.println("No checkpoints to remove.");
         }
     }
+
     private void removeLastCheckpoint() {
         if (!checkpoints.isEmpty()) {
             System.out.println("Removed: " + checkpoints.removeLast());
@@ -57,8 +65,10 @@ public class CheckpointTracker {
             System.out.println("No checkpoints to remove.");
         }
     }
+
     private void showCheckpoints() {
         System.out.println("\n--- Current Checkpoints ---");
+        
         if (checkpoints.isEmpty()) {
             System.out.println("No checkpoints recorded.");
         } else {
